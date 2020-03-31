@@ -1,0 +1,13 @@
+a:hover {
+  color: #fefefe;
+  text-decoration: underline;
+}
+
+.navbar-light .navbar-text a {
+  color: rgba(251,245,245,0.9);
+}
+
+#space {
+  margin-top: 150px;
+}
+
