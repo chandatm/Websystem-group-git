@@ -33,7 +33,7 @@
                                 <a href="#">Login</a>
                             </li>
                             <li>
-                                <a href="#">Contact Us</a>
+                                <a href="../views/contact_us.php">Contact Us</a>
                             </li>
                         </ul>
                     </nav>
