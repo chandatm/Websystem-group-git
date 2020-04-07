@@ -11,10 +11,10 @@
   <section id="intro">
     <ul id="slippry-slider">
       <li>
-        <img src="../assets/img/slide/1.jpg" alt="banner-1">
+        <img src="../assets/img/slide/1.jpg">
       </li>
       <li>
-        <img src="../assets/img/slide/3.jpg" alt="banner-2">
+        <img src="../assets/img/slide/3.jpg">
       </li>
     </ul>
   </section>
