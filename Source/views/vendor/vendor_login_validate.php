@@ -3,11 +3,8 @@
 
 session_start();
 
-if (isset($_POST['loginbtn']))
-
+if (isset($_POST['btnVendorLogin']))
 {
-
-
     foreach ($_POST as $key => $value)
     {
         
@@ -43,7 +40,7 @@ if (isset($_POST['loginbtn']))
 
 //var_dump($pwd);
   //$sql = "Select email,pwd from Vendor";
-  $sql = "SELECT Vid FROM Vendor WHERE email = '$email' and pwd = '$pwd'";
+  $sql = "SELECT Vid FROM Vendor WHERE email = '$vendor_email' and pwd = '$vendor_password'";
    
   $result = $conn->query($sql);
       
@@ -62,7 +59,7 @@ if (isset($_POST['loginbtn']))
        
        // echo " user not found";
         //redirect back to login page with error
-        header("location:Login.php");
+        header("location:vendor_login.php");
          // $errormsg = "Your Login Name or Password is invalid";
       }
    

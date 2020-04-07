@@ -6,7 +6,7 @@
 
 <body>
 <!-- navbar -->
-<?php include '../shared/navbar_template.php' ?>
+<?php include '../shared/main_navbar_template.php' ?>
 
 <!-- section contact -->
 <section id="contact" class="section">

@@ -30,7 +30,7 @@
                     <li class="nav-item" role="presentation"><a class="nav-link" href="AboutUs.html">AboutUs</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="ContactUs.html">ContactUs</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="Products.php">Products</a></li>
-                </ul><span class="navbar-text actions"> <a class="text-primary login" href="Login.php">Log In</a><a class="btn btn-light active action-button" role="button" href="Register.php" style="background-color: rgb(23,21,146);">Register</a></span></div>
+                </ul><span class="navbar-text actions"> <a class="text-primary login" href="vendor/vendor_login.php">Log In</a><a class="btn btn-light active action-button" role="button" href="Register.php" style="background-color: rgb(23,21,146);">Register</a></span></div>
         </div>
     </nav>
     <div class="register-photo">
@@ -45,7 +45,7 @@
                 <div class="form-group">
                     <div class="form-check"><label class="form-check-label"></label></div>
                 </div>
-                <div class="form-group"><button class="btn btn-primary btn-block" type="submit" style="background-color: rgb(23,21,146);">Sign Up</button></div><a href="Login.php" class="already">You already have an account? Login here.</a></form>
+                <div class="form-group"><button class="btn btn-primary btn-block" type="submit" style="background-color: rgb(23,21,146);">Sign Up</button></div><a href="vendor/vendor_login.php" class="already">You already have an account? Login here.</a></form>
         </div>
     </div>
     <script src="assets/js/jquery.min.js"></script>

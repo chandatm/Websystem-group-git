@@ -2,7 +2,7 @@
 <html lang="en">
 
 <!-- head -->
-<?php include '../shared/head_template.php' ?>
+<?php include '../../shared/vendor/vendor_head_template.php' ?>
 
 <header>
     <div id="navigation" class="navbar navbar-inverse navbar-fixed-top default" role="navigation">
@@ -14,26 +14,20 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="../views/index.php">J’s Electronics</a>
+                <a class="navbar-brand" href="../../views/index.php">J’s Electronics Vendor</a>
             </div>
             <div class="navigation">
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <nav>
                         <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a href="../../views/index.php">Home</a>
+                            </li>
                             <li class="current">
-                                <a href="../views/index.php">Home</a>
+                                <a href="../../views/vendor/vendor_login.php">Login</a>
                             </li>
                             <li>
-                                <a href="../views/about_us.php">About</a>
-                            </li>
-                            <li>
-                                <a href="#">Products</a>
-                            </li>
-                            <li>
-                                <a href="#">Login</a>
-                            </li>
-                            <li>
-                                <a href="../views/contact_us.php">Contact Us</a>
+                                <a href="../../views/vendor/vendor_register.php">Register</a>
                             </li>
                         </ul>
                     </nav>

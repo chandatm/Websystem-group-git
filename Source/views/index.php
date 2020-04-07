@@ -6,15 +6,15 @@
 
 <body>
   <!-- navbar -->
-  <?php include '../shared/navbar_template.php' ?>
+  <?php include '../shared/main_navbar_template.php' ?>
   <!-- section intro -->
   <section id="intro">
     <ul id="slippry-slider">
       <li>
-        <img src="../assets/img/slide/1.jpg">
+        <img src="../assets/img/slide/1.jpg" alt="banner-1">
       </li>
       <li>
-        <img src="../assets/img/slide/3.jpg">
+        <img src="../assets/img/slide/3.jpg" alt="banner-2">
       </li>
     </ul>
   </section>

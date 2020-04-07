@@ -8,25 +8,25 @@
 <!-- navbar -->
 <?php include '../shared/main_navbar_template.php' ?>
 
-<!-- section intro -->
-
-    <img src="../assets/img/slide/2.jpg" style="height: 500px;width: 100%">
-
-<!-- end intro -->
-
 <!-- Section about -->
 <section id="about" class="section">
     <div class="container">
         <div class="row">
-            <div class="col-md-8 col-md-offset-2">
+            <div class="col-md-8 col-md-offset-2" style="margin-top: 70px;">
                 <div class="heading">
-                    <h3><span>About us</span></h3>
+                    <h3><span>Who are you?</span></h3>
                 </div>
                 <div class="sub-heading">
                     <p>
-                        We offer affordable and reliable products to <strong>YOU</strong> our customers.
+                        We offer affordable and <strong>RELIABLE</strong> services to  our customers.
                     </p>
                 </div>
+                <form action="accounts_validate.php" method="post" style="margin-bottom: 70px;">
+                    <div class="text-center">
+                        <button type="submit" name="btnVendorLogin" class="btn btn-primary btn-lg">I am a Vendor</button>
+                        <button type="submit" name="btnAdminLogin" class="btn btn-theme btn-lg">Administrator</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
