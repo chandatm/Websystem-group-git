@@ -66,24 +66,13 @@ if (isset($_POST['btnVendorLogin']))
 $conn->close();
 
 
+    /* Please note: If the user logs in as a vendor carry them to the Vendor Dashboard
+    This is where a vendor can manage their account and add product etc */
+
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-?>
+if (isset($_POST['btnVendorRegister']))
+{
+    header("Location: vendor_register.php");
+}
