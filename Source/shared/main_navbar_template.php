@@ -30,7 +30,7 @@
                                 <a href="#">Products</a>
                             </li>
                             <li>
-                                <a href="../views/accounts.php">Login</a>
+                                <a href="../views/accounts_login.php">Login</a>
                             </li>
                             <li>
                                 <a href="../views/contact_us.php">Contact Us</a>

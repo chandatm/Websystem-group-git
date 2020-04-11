@@ -6,7 +6,23 @@
 
 <body>
   <!-- navbar -->
-  <?php include '../shared/main_navbar_template.php' ?>
+  <?php
+  if ($_SESSION['login_user'] == "jelectricsAdmin")
+  {
+      // Admin navbar
+      include("../shared/admin/admin_navbar_template.php");
+  }
+  else if ($_SESSION['login_user'] != null)
+  {
+      // Vendor navbar
+      include("../shared/vendor/vendor_dashboard_navbar_template.php");
+  }
+  else
+  {
+      // Guest navbar
+      include("../shared/main_navbar_template.php");
+  }
+  ?>
   <!-- section intro -->
   <section id="intro">
     <ul id="slippry-slider">
