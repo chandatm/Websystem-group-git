@@ -7,19 +7,19 @@
 <body>
   <!-- navbar -->
   <?php
-  if ($_SESSION['login_user'] == "jelectricsAdmin")
+  if ($_SESSION['UserType'] == "admin")
   {
-      // Admin navbar
+      // Display Admin navbar
       include("../shared/admin/admin_navbar_template.php");
   }
-  else if ($_SESSION['login_user'] != null)
+  else if ($_SESSION['UserType'] == "vendor")
   {
-      // Vendor navbar
+      // Display Vendor navbar
       include("../shared/vendor/vendor_dashboard_navbar_template.php");
   }
   else
   {
-      // Guest navbar
+      // Display Guest navbar
       include("../shared/main_navbar_template.php");
   }
   ?>

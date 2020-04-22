@@ -10,7 +10,8 @@
     }
     else
     {
-        $_SESSION['vendor_email_error'] = "";
+        $_SESSION['email_error'] = "";
+        $_SESSION['error_message'] = "";
     }
 ?>
 
@@ -37,6 +38,7 @@
                     <p>
                         Order from our wide range of products.
                     </p>
+                    <p style="color: red;" class="text-danger"><?php echo $_SESSION['error_message']; ?></p>
                 </div>
             </div>
         </div>
@@ -50,12 +52,12 @@
                         <form action="accounts_login_validate.php" method="post" role="form" class="contactForm">
                             <div class="form-group">
                                 <label>Email Address</label>
-                                <p class="text-danger"><?php echo $_SESSION['vendor_email_error']; ?></p>
-                                <input type="text" name="vendor_email" class="form-control" title="Enter Email Address" placeholder="Email Address" value="<?php echo $_SESSION['vendor_email'];?>" required />
+                                <p class="text-danger"><?php echo $_SESSION['email_error']; ?></p>
+                                <input type="text" name="email" class="form-control" title="Enter Email Address" placeholder="Email Address" value="<?php echo $_SESSION['email'];?>" required />
                             </div>
                             <div class="form-group">
                                 <label>Password</label>
-                                <input class="form-control" type="password" title="Enter password" name="vendor_password" placeholder="Password" required>
+                                <input class="form-control" type="password" title="Enter password" name="password" placeholder="Password" required>
                             </div>
                             <div class="text-center">
                                 <form action="accounts_login_validate.php" method="post">

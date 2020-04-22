@@ -2,5 +2,5 @@
    session_start();
    
    if(session_destroy()) {
-      header("Location: vendor_login.php");
+      header("Location: ../../views/index.php");
    }
