@@ -13,6 +13,7 @@
         $_SESSION['vendor_company_name_error'] = "";
         $_SESSION['vendor_email_error'] = "";
         $_SESSION['vendor_password_error'] = "";
+        $_SESSION['success_message'] = "";
     }
 ?>
 
@@ -39,6 +40,7 @@
                     <p>
                         List your products on our platform.
                     </p>
+                    <p style="color: green;" class="text-success"><?php echo $_SESSION['success_message']; ?></p>
                 </div>
             </div>
         </div>

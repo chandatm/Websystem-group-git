@@ -55,6 +55,26 @@
         else
         {
             // Save to database and redirect user now sign in
+
+            // Uncomment for Windows DB connection
+//            $conn = mysqli_connect("localhost", "root", "root", "WSDI_jselectronic") or die ("Could not connect to database");
+
+            // Mac DB connection
+            $conn = mysqli_connect("localhost:8889", "root", "root", "WSDI_jselectronic") or die ("Could not connect to database");
+
+            // Generate random integer of ID
+            $randomID = rand(1,10);
+
+            $query= "INSERT INTO Vendor(Id, Company_name, Email, Password) 
+                VALUES ('$randomID', '$vendor_company_name', '$vendor_email', '$vendor_password')";
+
+            mysqli_query($conn, $query) or die ("Could not insert into table");
+
+            $_SESSION['success_message'] = "Vendor Registered Successfully!";
+
+            header("Location: accounts_register.php");
+
+            mysqli_close($conn);
         }
     }
 
