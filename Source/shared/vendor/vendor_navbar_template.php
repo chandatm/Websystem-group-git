@@ -29,6 +29,12 @@
                             <li>
                                 <a href="../../views/vendor/vendor_register.php">Register</a>
                             </li>
+                            <li>
+                            <form action="searchproduct.php" method="POST">
+                                <div class="nav-item"><input class="form-control" type="text" name="search" placeholder="Search" aria-label="Search"></div>
+                                <div class="nav-item"><button class="btn btn-primary btn-block" type='submit' name='btn_search' style="background-color: rgb(23,21,146);">Search</button></div>
+                            </form>
+                            </li>
                         </ul>
                     </nav>
                 </div>

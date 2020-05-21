@@ -60,7 +60,7 @@
 //            $conn = mysqli_connect("localhost", "root", "root", "WSDI_jselectronic") or die ("Could not connect to database");
 
             // Mac DB connection
-            $conn = mysqli_connect("localhost:8889", "root", "root", "WSDI_jselectronic") or die ("Could not connect to database");
+            $conn = mysqli_connect("localhost", "root", "", "jselectronic") or die ("Could not connect to database");
 
             // Generate random integer of ID
             $randomID = rand(1,10);
