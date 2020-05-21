@@ -40,11 +40,15 @@
                 <th>Image</th>
             </tr>
         <?php
-            $conn = mysqli_connect("localhost", "root", "", "jselectronic") or die ("Could not connect to database");
-    
-                $query = "SELECT * FROM products";
+            // Uncomment for Windows DB connection
+            // $conn = mysqli_connect("localhost", "root", "root", "jselectronic") or die ("Could not connect to database");
 
-                $runqry = mysqli_query($conn, $query) or die("</br></br>Could not find data.");
+            // Mac DB connection
+            $conn = mysqli_connect("localhost:8889", "root", "root", "jselectronic") or die ("Could not connect to database");
+    
+            $query = "SELECT * FROM products";
+
+            $runqry = mysqli_query($conn, $query) or die("</br></br>Could not find data.");
 
                 while($row = mysqli_fetch_assoc($runqry))
                 {

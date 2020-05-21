@@ -39,7 +39,11 @@
                 <th>Image</th>
             </tr>
         <?php
-            $conn = mysqli_connect("localhost", "root", "", "jselectronic") or die ("Could not connect to database");
+            // Uncomment for Windows DB connection
+            // $conn = mysqli_connect("localhost", "root", "root", "jselectronic") or die ("Could not connect to database");
+
+            // Mac DB connection
+            $conn = mysqli_connect("localhost:8889", "root", "root", "jselectronic") or die ("Could not connect to database");
     
             if(isset($_POST['btn_search'])){
                 

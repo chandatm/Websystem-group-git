@@ -140,7 +140,11 @@
             }
         }
 
-        $conn = mysqli_connect("localhost", "root", "", "jselectronic") or die ("Could not connect to database");
+        // Uncomment for Windows DB connection
+        // $conn = mysqli_connect("localhost", "root", "root", "jselectronic") or die ("Could not connect to database");
+
+        // Mac DB connection
+        $conn = mysqli_connect("localhost:8889", "root", "root", "jselectronic") or die ("Could not connect to database");
         
         $query= "UPDATE `products` SET `Name`='$productName',`Code`='$productCode',`Manufacturer`='$manufacturer',`ManufacturerDate`='$manufacturerDate',`Type`='$productType',`Description`='$productDescription',`CostPrice`='$costPrice',`SalesPrice`='$salesPrice',`Quantity`='$quantity',`Image`='$target_file' WHERE `ProductId`= '$productId'";
 
