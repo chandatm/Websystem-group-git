@@ -37,7 +37,7 @@
 //            $conn = mysqli_connect("localhost", "root", "root", "WSDI_jselectronic") or die ("Could not connect to database");
 
             // Mac DB connection
-            $conn = mysqli_connect("localhost:8889", "root", "root", "WSDI_jselectronic") or die ("Could not connect to database");
+            $conn = mysqli_connect("localhost", "root", "", "jselectronic") or die ("Could not connect to database");
 
             if ($email == "jelectricsAdmin@gmail.com" and $password == "moreandmore#789")
             {
