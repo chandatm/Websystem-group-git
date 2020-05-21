@@ -59,6 +59,10 @@
                 {
                     // Set user type
                     $_SESSION['UserType'] = "vendor";
+
+                    // Store values from DB
+
+
                     header("Location: ../views/vendor/vendor_dashboard.php");
                 }
                 else

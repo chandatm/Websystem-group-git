@@ -15,9 +15,9 @@
             $_SESSION[$key] = $value;
         }
 
-        if (($vendor_company_name == null) || (strlen($vendor_company_name) < 5))
+        if (($vendor_company_name == null) || (strlen($vendor_company_name) < 4))
         {
-            $_SESSION['vendor_company_name_error'] = "Company Name must be at least FIVE(5) characters long.";
+            $_SESSION['vendor_company_name_error'] = "Company Name must be at least FOUR(4) characters long.";
             $_SESSION['error_flag']++;
         }
         else
@@ -37,7 +37,7 @@
 
         if (($vendor_password == null))
         {
-            $_SESSION['vendor_password_error'] = "Please enter a valid password.";
+            $_SESSION['vendor_password_error'] = "Password must be at least FIVE(5) characters.";
             $_SESSION['error_flag']++;
         }
         else
