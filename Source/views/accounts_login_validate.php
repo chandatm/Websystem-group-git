@@ -34,10 +34,10 @@
         else
         {
             // Uncomment for Windows DB connection
-//            $conn = mysqli_connect("localhost", "root", "root", "WSDI_jselectronic") or die ("Could not connect to database");
+            // $conn = mysqli_connect("localhost", "root", "root", "jselectronic") or die ("Could not connect to database");
 
             // Mac DB connection
-            $conn = mysqli_connect("localhost:8889", "root", "root", "WSDI_jselectronic") or die ("Could not connect to database");
+            $conn = mysqli_connect("localhost:8889", "root", "root", "jselectronic") or die ("Could not connect to database");
 
             if ($email == "jelectricsAdmin@gmail.com" and $password == "moreandmore#789")
             {
@@ -59,6 +59,10 @@
                 {
                     // Set user type
                     $_SESSION['UserType'] = "vendor";
+
+                    // Store values from DB
+                    $_SESSION['vendor_email'] = $email;
+
                     header("Location: ../views/vendor/vendor_dashboard.php");
                 }
                 else

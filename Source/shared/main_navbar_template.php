@@ -27,7 +27,7 @@
                                 <a href="../views/about_us.php">About</a>
                             </li>
                             <li>
-                                <a href="#">Products</a>
+                                <a href="../views/products.php">Products</a>
                             </li>
                             <li>
                                 <a href="../views/accounts_login.php">Login</a>

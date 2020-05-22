@@ -27,17 +27,24 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <div class="text-center" style="margin-top: 80px;">
                         <form action="vendor_dashboard_logic.php" method="post">
-                            <button type="submit" name="btnVendorProducts" class="btn btn-lg btn-primary">Manage Products</button>
+                            <button type="submit" name="btnAddVendorProducts" class="btn btn-lg btn-primary">Add a Product</button>
                         </form>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <div class="text-center" style="margin-top: 80px;">
                         <form action="vendor_dashboard_logic.php" method="post">
-                            <button type="submit" name="btnVendorAccountDetails" class="btn btn-lg btn-theme">Edit Account Details</button>
+                            <button type="submit" name="btnEditVendorProducts" class="btn btn-lg btn-theme">Edit a Product</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center" style="margin-top: 80px;">
+                        <form action="vendor_dashboard_logic.php" method="post">
+                            <button type="submit" name="btnDeleteVendorProducts" class="btn btn-lg btn-danger">Delete a Product</button>
                         </form>
                     </div>
                 </div>
