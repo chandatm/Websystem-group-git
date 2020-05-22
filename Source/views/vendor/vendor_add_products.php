@@ -135,7 +135,7 @@ else
                     VALUES ('$productName', '$productCode', '$manufacturer', '$manufacturerDate', '$productType', '$productDescription', '$costPrice', '$salesPrice', '$quantity', '$target_file')";
 
         mysqli_query($conn, $query) or die ("Could not insert into table");
-        $message = "Data inserted into table";
+        $message = "Product added successfully";
         echo "<script type='text/javascript'>alert('$message');</script>";
 
         mysqli_close($conn);

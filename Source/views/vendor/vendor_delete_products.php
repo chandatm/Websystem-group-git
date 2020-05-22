@@ -100,18 +100,20 @@
                 </table>
                 <br>
                 <div class="cform" id="contact-form">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <form action="vendor_delete_products.php" method="post" role="form" class="contactForm">
-                                <div class="form-group">
-                                    <input class="form-control" type="text" name="id" placeholder="Enter Product ID to delete..." aria-label="Delete">
+                    <form action="vendor_delete_products.php" method="post" role="form" class="contactForm">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input class="form-control" type="text" name="id" placeholder="Enter Product ID to delete..." aria-label="Delete">
+                                    </div>
                                 </div>
-                            </form>
+                                <div class="col-md-6">
+                                    <button class="btn btn-lg btn-primary" type="submit" name="delete">Delete product</button>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-md-6">
-                            <button class="btn btn-lg btn-primary" type="submit" name="delete">Delete product</button>
-                        </div>
-                    </div>
+                    </form>
                 </div>
                 <?php
                     if(isset($_POST['delete']))
@@ -131,6 +133,10 @@
                             $runqry = mysqli_query($conn, $query) or die("Could not find data.");
 
                             mysqli_close($conn);
+
+                            $message = "Product removed successfully";
+                            echo "<script type='text/javascript'>alert('$message');</script>";
+
                             echo '<META HTTP-EQUIV="Refresh" Content="0; URL=' . $location . '">';
                         }
                     }
