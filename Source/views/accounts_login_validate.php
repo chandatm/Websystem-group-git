@@ -61,7 +61,7 @@
                     $_SESSION['UserType'] = "vendor";
 
                     // Store values from DB
-
+                    $_SESSION['vendor_email'] = $email;
 
                     header("Location: ../views/vendor/vendor_dashboard.php");
                 }

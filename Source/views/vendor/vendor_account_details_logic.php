@@ -33,22 +33,23 @@
         }
         else
         {
-            // Save to database and redirect user now sign in
-
             // Uncomment for Windows DB connection
-    //            $conn = mysqli_connect("localhost", "root", "root", "WSDI_jselectronic") or die ("Could not connect to database");
+            // $conn = mysqli_connect("localhost", "root", "root", "jselectronic") or die ("Could not connect to database");
 
             // Mac DB connection
-            $conn = mysqli_connect("localhost:8889", "root", "root", "WSDI_jselectronic") or die ("Could not connect to database");
+            $conn = mysqli_connect("localhost:8889", "root", "root", "jselectronic") or die ("Could not connect to database");
 
-            $query= "UPDATE Vendor SET Company_name = '$vendor_company_name' WHERE Id = '$vendor_Id'";
+            // Retrieve ID from session
+            $Id = $_SESSION['vendor_id'];
+
+            $query= "UPDATE vendor SET Company_name = '$vendor_account_company_name' WHERE Id = '$Id'";
 
             mysqli_query($conn, $query) or die ("Could not insert into table");
+
+            mysqli_close($conn);
 
             $_SESSION['account_details_success_message'] = "Profile Updated Successfully!";
 
             header("Location: vendor_account_details.php");
-
-            mysqli_close($conn);
         }
     }
