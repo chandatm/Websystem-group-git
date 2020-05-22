@@ -10,7 +10,7 @@
   if ($_SESSION['UserType'] == "admin")
   {
       // Display Admin navbar
-      include("../shared/admin/admin_navbar_template.php");
+      include("../shared/admin/admin_dashboard_navbar_template.php");
   }
   else if ($_SESSION['UserType'] == "vendor")
   {

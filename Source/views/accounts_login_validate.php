@@ -45,6 +45,7 @@
                 $_SESSION['UserType'] = "admin";
 
                 // Navigate to Admin pages
+                header("Location: ../views/admin/admin_dashboard.php");
             }
             else
             {
