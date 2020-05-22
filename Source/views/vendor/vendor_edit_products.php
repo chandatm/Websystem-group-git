@@ -141,8 +141,9 @@ else
         {
             $message = "Data updated successfully";
             echo "<script type='text/javascript'>alert('$message');</script>";
-
-        }else{
+        }
+        else
+        {
             $message = "Data not updated";
             echo "<script type='text/javascript'>alert('$message');</script>";
         }

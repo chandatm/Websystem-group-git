@@ -136,8 +136,6 @@
 
                             $message = "Product removed successfully";
                             echo "<script type='text/javascript'>alert('$message');</script>";
-
-                            echo '<META HTTP-EQUIV="Refresh" Content="0; URL=' . $location . '">';
                         }
                     }
                 ?>

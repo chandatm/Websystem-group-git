@@ -46,8 +46,7 @@ if (isset($_POST['btn_search']))
                             <input class="form-control" type="text" name="search" placeholder="Search for your favourite product..." aria-label="Search">
                             <button class="btn btn-lg btn-primary" type='submit' name='btn_search'>Search</button>
                         </div>
-                    </form>
-                </div>
+                    </form>                </div>
             </div>
         </div>
     </div>

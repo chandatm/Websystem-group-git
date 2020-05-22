@@ -45,19 +45,48 @@
                 <div class="col-md-6">
                     <h3>My Account Details</h3>
                     <div class="cform" id="contact-form">
-                        <form action="vendor_account_details_logic.php" method="post" role="form" class="contactForm">
-                            <div class="form-group">
-                                <label>Company Name</label>
-                                <input type="text" name="vendor_company_name" class="form-control" title="Enter Company Name" placeholder="Company Name" value="<?php echo $_SESSION['vendor_company_name'];?>" readonly />
-                            </div>
-                            <div class="form-group">
-                                <label>Email Address</label>
-                                <input type="text" name="vendor_email" class="form-control" title="Enter Email Address" placeholder="Email Address" value="<?php echo $_SESSION['vendor_email'];?>" readonly />
-                            </div>
-                            <div class="form-group">
-                                <label>Password</label>
-                                <input class="form-control" type="password" title="Enter password" name="vendor_password" placeholder="Password" value="<?php echo $_SESSION['vendor_password'];?>" readonly>
-                            </div>
+                        <form role="form" class="contactForm">
+                            <?php
+                            // Uncomment for Windows DB connection
+                            // $conn = mysqli_connect("localhost", "root", "root", "jselectronic") or die ("Could not connect to database");
+
+                            // Mac DB connection
+                            $conn = mysqli_connect("localhost:8889", "root", "root", "jselectronic") or die ("Could not connect to database");
+
+                            $email = $_SESSION['vendor_email'];
+
+//                            var_dump($email);
+
+                            if($conn)
+                            {
+                                $query = "SELECT * FROM `vendor` WHERE `Email` = '$email'";
+//                            $query = "SELECT * FROM `vendor`";
+
+                                $runquery = mysqli_query($conn, $query) or die("Could not find data.");
+
+                                while($row = mysqli_fetch_assoc($runquery))
+                                {
+                                    // Create session to store ID fro DB
+                                    $_SESSION['vendor_id'] = $row['Id'];
+                                    ?>
+                                    <div class="form-group">
+                                        <label>Company Name</label>
+                                        <input type="text" name="vendor_company_name" class="form-control" title="Enter Company Name" placeholder="Company Name" value="<?php echo $row['Company_name']; ?>" readonly />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Email Address</label>
+                                        <input type="text" name="vendor_email" class="form-control" title="Enter Email Address" placeholder="Email Address" value="<?php echo $row['Email']; ?>" readonly />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Password</label>
+                                        <input class="form-control" type="password" title="Enter password" name="vendor_password" placeholder="Password" value="<?php echo $row['Password']; ?>" readonly>
+                                    </div>
+                                    <?php
+                                }
+
+                                mysqli_close($conn);
+                            }
+                            ?>
                         </form>
                     </div>
                 </div>
@@ -68,15 +97,7 @@
                             <div class="form-group">
                                 <label>Company Name</label>
                                 <p class="text-danger"><?php echo $_SESSION['vendor_company_name_error']; ?></p>
-                                <input type="text" name="vendor_account_company_name" class="form-control" title="Enter Company Name" placeholder="Company Name" value="<?php echo $_SESSION['vendor_account_company_name'];?>" required />
-                            </div>
-                            <div class="form-group">
-                                <label>Email Address</label>
-                                <input type="text" name="vendor_account_email" class="form-control" title="Enter Email Address" placeholder="Email Address" value="<?php echo $_SESSION['vendor_email'];?>" readonly />
-                            </div>
-                            <div class="form-group">
-                                <label>Password</label>
-                                <input class="form-control" type="password" title="Enter password" name="vendor_account_password" placeholder="Password" value="<?php echo $_SESSION['vendor_password'];?>" readonly>
+                                <input type="text" name="vendor_account_company_name" class="form-control" title="Enter Company Name" placeholder="Company Name" required />
                             </div>
                             <div class="text-center">
                                 <button type="submit" name="btnVendorAccountDetails" class="btn btn-lg btn-theme">Update Account Details</button>
