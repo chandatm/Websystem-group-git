@@ -30,7 +30,7 @@
                                 <a href="../../views/admin/admin_products.php">Products</a>
                             </li>
                             <li>
-                                <a href="">Vendors</a>
+                                <a href="../../views/admin/admin_vendors.php">Vendors</a>
                             </li>
                             <li>
                                 <a href="../../views/admin/admin_logout.php">Logout</a>

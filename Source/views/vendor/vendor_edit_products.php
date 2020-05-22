@@ -133,8 +133,6 @@ else
 
         $query= "UPDATE `products` SET `Name`='$productName',`Code`='$productCode',`Manufacturer`='$manufacturer',`ManufacturerDate`='$manufacturerDate',`Type`='$productType',`Description`='$productDescription',`CostPrice`='$costPrice',`SalesPrice`='$salesPrice',`Quantity`='$quantity',`Image`='$target_file' WHERE `ProductId`= '$productId'";
 
-        echo $query;
-
         $result = mysqli_query($conn, $query) or die ("Could not insert into table");
 
         if ($result)
