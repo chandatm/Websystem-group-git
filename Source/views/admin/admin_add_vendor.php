@@ -10,11 +10,9 @@
     }
     else
     {
-        $_SESSION['user_first_name_error'] = "";
-        $_SESSION['user_last_name_error'] = "";
-        $_SESSION['user_date_of_birth'] = "";
-        $_SESSION['user_email_error'] = "";
-        $_SESSION['user_password_error'] = "";
+        $_SESSION['vendor_company_name_error'] = "";
+        $_SESSION['vendor_email_error'] = "";
+        $_SESSION['vendor_password_error'] = "";
         $_SESSION['success_message'] = "";
     }
 ?>
@@ -54,11 +52,11 @@
                 <div class="col-md-6">
                     <!-- start vendor login form -->
                     <div class="cform" id="contact-form">
-                        <form action="admin_add_user_account_logic.php" method="post" role="form" class="contactForm">
+                        <form action="admin_add_vendor_logic.php" method="post" role="form" class="contactForm">
                             <div class="form-group">
                                 <label>Company Name</label>
                                 <p class="text-danger"><?php echo $_SESSION['vendor_company_name_error']; ?></p>
-                                <input type="text" name="company_name" class="form-control" title="Enter Company Name" placeholder="Company name" required />
+                                <input type="text" name="vendor_company_name" class="form-control" title="Enter Company Name" placeholder="Company name" required />
                             </div>
                             <div class="form-group">
                                 <label>Email Address</label>
@@ -68,11 +66,11 @@
                             <div class="form-group">
                                 <label>Password</label>
                                 <p class="text-danger"><?php echo $_SESSION['vendor_password_error']; ?></p>
-                                <input class="form-control" type="password" title="Enter password" name="user_password" placeholder="Password" required>
+                                <input class="form-control" type="password" title="Enter password" name="vendor_password" placeholder="Password" required>
                             </div>
                             <div class="text-center">
                                 <form action="#" method="post">
-                                    <button type="submit" name="btnAddUserAccount" class="btn btn-theme btn-lg">Add Vendor</button>
+                                    <button type="submit" name="btnAddVendorAccount" class="btn btn-theme btn-lg">Add Vendor</button>
                                 </form>
                             </div>
                         </form>
