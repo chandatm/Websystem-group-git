@@ -109,6 +109,23 @@ INSERT INTO `vendor` (`Id`, `Company_name`, `Email`, `Password`) VALUES
 (8, 'ABC Electronics', 'cbardaniel@gmail.com', 'Welcome1');
 COMMIT;
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Users`
+--
+
+DROP TABLE IF EXISTS `Users`;
+CREATE TABLE IF NOT EXISTS `Users` (
+    `Id` int(11) NOT NULL AUTO_INCREMENT,
+    `FirstName` varchar(50) NOT NULL,
+    `LastName` varchar(50) NOT NULL,
+    `DOB` varchar(50) NOT NULL,
+    `Email` varchar(20) NOT NULL,
+    `Password` varchar(50) NOT NULL,
+    PRIMARY KEY (`Id`)
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

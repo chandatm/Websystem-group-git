@@ -1,6 +1,6 @@
 <?php
 
-    if (isset($_POST['btnAccountRegister']))
+    if (isset($_POST['btnAddVendorAccount']))
     {
         // Create a session
         session_start();
@@ -50,7 +50,7 @@
         if ($_SESSION['error_flag'] > 0)
         {
             // Redirects user to error page
-            header("Location: accounts_register.php");
+            header("Location: admin_add_vendor.php");
         }
         else
         {
@@ -63,21 +63,15 @@
             // Generate random integer of ID
             $randomID = rand(1, 1000);
 
-            $query= "INSERT INTO Vendor(Id, Company_name, Email, Password) 
-                VALUES ('$randomID', '$vendor_company_name', '$vendor_email', '$vendor_password')";
+            $query= "INSERT INTO vendor(Id, Company_name, Email, Password) 
+                    VALUES ('$randomID', '$vendor_company_name', '$vendor_email', '$vendor_password')";
 
             mysqli_query($conn, $query) or die ("Could not insert into table");
 
             $_SESSION['success_message'] = "Vendor Registered Successfully!";
 
-            header("Location: accounts_register.php");
+            header("Location: admin_add_vendor.php");
 
             mysqli_close($conn);
         }
-    }
-
-    // Redirect to login page
-    if (isset($_POST['btnAccountLogin']))
-    {
-        header("Location: accounts_login.php");
     }

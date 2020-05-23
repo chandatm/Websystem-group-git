@@ -2,7 +2,7 @@
 <html lang="en">
 
 <!-- head -->
-<?php include '../../shared/vendor/vendor_head_template.php' ?>
+<?php include '../../shared/admin/admin_head_template.php' ?>
 
 <header>
     <div id="navigation" class="navbar navbar-inverse navbar-fixed-top default" role="navigation">
@@ -14,26 +14,26 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="../../views/index.php">J’s Electronics Vendor</a>
+                <a class="navbar-brand" href="../../views/admin/admin_dashboard.php">J’s Electronics Admin Dashboard</a>
             </div>
             <div class="navigation">
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <nav>
                         <ul class="nav navbar-nav navbar-right">
-                            <li>
-                                <a href="../../views/index.php">Home</a>
-                            </li>
                             <li class="current">
-                                <a href="../../views/vendor/vendor_login.php">Login</a>
+                                <a href="../../views/admin/admin_dashboard.php">Home</a>
                             </li>
                             <li>
-                                <a href="../../views/vendor/vendor_register.php">Register</a>
+                                <a href="../../views/admin/admin_user_accounts.php">Users</a>
                             </li>
                             <li>
-                            <form action="searchproduct.php" method="POST">
-                                <div class="nav-item"><input class="form-control" type="text" name="search" placeholder="Search" aria-label="Search"></div>
-                                <div class="nav-item"><button class="btn btn-primary btn-block" type='submit' name='btn_search' style="background-color: rgb(23,21,146);">Search</button></div>
-                            </form>
+                                <a href="../../views/admin/admin_products.php">Products</a>
+                            </li>
+                            <li>
+                                <a href="../../views/admin/admin_vendors.php">Vendors</a>
+                            </li>
+                            <li>
+                                <a href="../../views/admin/admin_logout.php">Logout</a>
                             </li>
                         </ul>
                     </nav>
