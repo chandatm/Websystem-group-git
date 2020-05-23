@@ -33,7 +33,7 @@
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <button class="btn btn-lg btn-primary" type="submit" name="delete">Delete product</button>
+                                <button class="btn btn-lg btn-primary" type="submit" name="delete">Delete vendor</button>
                             </div>
                         </div>
                     </div>
